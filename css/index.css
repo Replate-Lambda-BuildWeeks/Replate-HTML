@@ -19,7 +19,7 @@ time, mark, audio, video {
 	margin: 0;
 	padding: 0;
 	border: 0;
-	font-size: 100%;
+	font-size: 62.5%;
 	font: inherit;
 	vertical-align: baseline;
 }
@@ -64,8 +64,46 @@ h1, h2, h3, h4, h5 {
     margin-bottom: 15px;
 }
 
+h2{
+    font-size: 3rem;
+    letter-spacing: 10px;
+}
+
+h3{
+    font-size: 2rem;
+}
+
+h4{
+    font-size: 1.5rem;
+}
+
+/*******************************************/
 *{
     border: 1px solid gray
 }
+/*******************************************/
 
+header{
+    display: flex;
+    width: 100%;
+}
 
+.header{
+    width: 100%;
+}
+
+.header h1{
+    font-size: 5rem;
+    letter-spacing: 30px;
+    display: flex;
+    width: 50%;
+}
+.header nav{
+    align-content: space-between;
+    padding: 0 10px;
+}
+
+.main img{
+    display: flex;
+    align-items: center;
+}
