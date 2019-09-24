@@ -136,7 +136,10 @@ html,
 body {
   font-family: 'Source Sans Pro', sans-serif;
   color: #0a3055;
-  background-color: #d6f8ff;
+  background-color: #b6c5d6;
+}
+body {
+  margin: 1%;
 }
 h1,
 h2,
@@ -144,7 +147,6 @@ h3,
 h4,
 h5 {
   font-family: 'Ubuntu', sans-serif;
-  color: #0a3055;
 }
 h1 {
   font-size: 4.5rem;
@@ -172,10 +174,33 @@ img {
   margin: 0 auto;
 }
 /************TEST BORDER*********************/
-* {
+body {
+  border: 1px solid gray;
+}
+header {
+  border: 1px solid gray;
+}
+div {
+  border: 1px solid gray;
+}
+p {
+  border: 1px solid gray;
+}
+nav {
+  border: 1px solid gray;
+}
+footer {
   border: 1px solid gray;
 }
 /************TEST BORDER*********************/
+header nav {
+  display: flex;
+  font-size: 2.5rem;
+}
+header a {
+  align-items: flex-end;
+  align-content: space-between;
+}
 .footer {
   width: 100%;
   border-top: 2px dashed silver;
@@ -186,4 +211,31 @@ img {
   color: #212529;
   font-size: 1.6rem;
   padding: 20px;
+}
+.top {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+.top div {
+  display: flex;
+  width: 100%;
+}
+.top img {
+  justify-content: center;
+  display: flex;
+  width: 100%;
+}
+.top .header {
+  display: flex;
+  position: absolute;
+}
+.top .header h1 {
+  font-size: 5rem;
+  letter-spacing: 30px;
+  width: 100%;
+}
+.header nav {
+  align-content: space-between;
+  padding: 0 10px;
 }
