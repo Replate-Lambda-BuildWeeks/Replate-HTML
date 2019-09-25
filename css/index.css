@@ -171,14 +171,45 @@ img {
   height: auto;
 }
 /************TEST BORDER*********************/
+body {
+  border: 1px solid gray;
+}
+header {
+  border: 1px solid gray;
+}
+div {
+  border: 1px solid gray;
+}
+h1,
+h2,
+h3,
+h4,
+h5 {
+  border: 1px solid gray;
+}
+a {
+  border: 1px solid gray;
+}
+p {
+  border: 1px solid gray;
+}
+nav {
+  border: 1px solid gray;
+}
+footer {
+  border: 1px solid gray;
+}
+img {
+  border: 1px solid gray;
+}
 /************TEST BORDER*********************/
-.top nav {
+.header nav {
   display: flex;
   width: 40%;
   padding-left: 2%;
   justify-content: center;
 }
-.top a {
+.header a {
   display: flex;
   font-size: 2.5rem;
   text-decoration: none;
@@ -210,33 +241,21 @@ footer a {
   font-size: 1.6rem;
   padding: 20px;
 }
-body {
-  margin: 0.5% 5%;
-}
-.top div {
+.top {
   display: flex;
-  width: 100%;
-  justify-content: center;
+  background: url(/img/orange-on-plate.jpg) no-repeat center center;
+  padding-bottom: 630px;
 }
-.top img {
+.header {
   display: flex;
-  width: 100%;
+  background: rgba(240, 248, 255, 0.3);
   align-items: center;
-}
-.top .header {
-  display: flex;
-  position: absolute;
-  width: 90%;
-}
-.header div {
-  display: flex;
-  width: 40%;
-  padding-top: 0.4%;
   justify-content: center;
+  width: 100%;
+  margin: 0 5%;
 }
 .header h1 {
   margin: 2% 0;
-  align-items: center;
 }
 .header .logo {
   width: 9%;
@@ -244,6 +263,7 @@ body {
 .logo img {
   display: flex;
   justify-content: center;
-  margin-left: 3%;
-  margin-top: -10%;
+  height: 100% auto;
+  width: 100% auto;
+  background-size: 100% auto;
 }
