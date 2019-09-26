@@ -150,7 +150,6 @@ h5 {
 }
 h1 {
   font-size: 5rem;
-  letter-spacing: 30px;
 }
 h2 {
   font-size: 3.6rem;
@@ -169,6 +168,9 @@ p {
 img {
   max-width: 100%;
   height: auto;
+}
+a {
+  font-family: 'Ubuntu', sans-serif;
 }
 /************TEST BORDER*********************/
 body {
@@ -203,24 +205,22 @@ img {
   border: 1px solid gray;
 }
 /************TEST BORDER*********************/
-.header nav {
-  display: flex;
-  width: 40%;
-  padding-left: 2%;
-  justify-content: center;
-}
 .header a {
+  color: #0a3055;
   display: flex;
   font-size: 2.5rem;
   text-decoration: none;
-  margin: 0 5%;
-  justify-content: space-between;
+  margin: 0 3%;
+  justify-content: space-around;
   align-items: center;
 }
-footer div {
-  display: flex;
-  padding-left: 2%;
-  justify-content: center;
+a:hover {
+  background-color: rgba(255, 146, 5, 0.5);
+  font-weight: bolder;
+  border-radius: 5px;
+  margin: 3%;
+  padding: 3% 0;
+  transition-duration: 0.5s;
 }
 footer a {
   display: flex;
@@ -249,21 +249,100 @@ footer a {
 .header {
   display: flex;
   background: rgba(240, 248, 255, 0.3);
-  align-items: center;
-  justify-content: center;
   width: 100%;
   margin: 0 5%;
 }
+@media (max-width: 860px) {
+  .header {
+    display: block;
+  }
+}
+@media (max-width: 500px) {
+  .header {
+    display: block;
+  }
+}
+.header .h1 {
+  display: flex;
+  width: 45%;
+  order: 0;
+}
+@media (max-width: 860px) {
+  .header .h1 {
+    width: 100%;
+    order: 1;
+  }
+}
+@media (max-width: 500px) {
+  .header .h1 {
+    width: 100%;
+  }
+}
 .header h1 {
-  margin: 2% 0;
+  display: flex;
+  width: 100%;
+  align-items: center;
+  letter-spacing: 20px;
+}
+@media (max-width: 860px) {
+  .header h1 {
+    width: 100%;
+    justify-content: center;
+  }
+}
+@media (max-width: 500px) {
+  .header h1 {
+    font-size: 4rem;
+    justify-content: center;
+  }
 }
 .header .logo {
-  width: 9%;
-}
-.logo img {
   display: flex;
+  width: 10%;
+  order: 1;
+}
+@media (max-width: 860px) {
+  .header .logo {
+    order: 0;
+  }
+}
+.header .nav {
+  display: flex;
+  width: 45%;
+  order: 2;
+}
+@media (max-width: 860px) {
+  .header .nav {
+    width: 100%;
+    order: 3;
+  }
+}
+@media (max-width: 500px) {
+  .header .nav {
+    font-size: 4rem;
+  }
+}
+.header nav {
+  display: flex;
+  width: 100%;
+  justify-content: flex-end;
+  margin: 0 -10% 0 2%;
+}
+@media (max-width: 860px) {
+  .header nav {
+    width: 100%;
+    justify-content: center;
+    margin: 0;
+  }
+}
+@media (max-width: 500px) {
+  .header nav {
+    font-size: 2rem;
+    justify-content: center;
+  }
+}
+footer div {
+  display: flex;
+  padding-left: 2%;
   justify-content: center;
-  height: 100% auto;
-  width: 100% auto;
-  background-size: 100% auto;
 }

@@ -12,25 +12,108 @@
 .header{
     display: flex;
     background: rgba(240, 248, 255, 0.3);
-    align-items: center;
-    justify-content: center;
+    // align-items: center;
+    // justify-content: center;
     width: 100%;
     margin: 0 5%;
-}
-.header h1{
-    margin: 2% 0;
-    // align-items: center;
-    // justify-items: center;
+
+    @media @tablet{
+        display: block;
+    };
+
+    @media @phone{
+        display: block;
+    };
+
+    .h1{
+        display: flex;
+        width: 45%;
+        order:0;
+
+        @media @tablet{
+            width: 100%;
+            order:1;
+        };
+
+        @media @phone{
+            width: 100%;
+        };
+    }
+    
+    h1{
+        display: flex;
+        width: 100%;
+        // margin: 2% 0;
+        align-items: center;
+        letter-spacing: 20px;
+
+        @media @tablet{
+            width: 100%;
+            justify-content: center;
+        };
+
+        @media @phone{
+            font-size: 4rem;
+            justify-content: center;
+        };
+    }
+
+    .logo{
+        display: flex;
+        width:10%;
+        order:1;
+
+        @media @tablet{
+            order:0;
+        };
+    }
+    
+    .nav{
+        display: flex;
+        width: 45%;
+        order:2;
+
+        @media @tablet{
+            width: 100%;
+            order:3;
+        };
+
+        @media @phone{
+            font-size: 4rem;
+        };
+    }
+
+    nav{
+        display: flex;
+        width: 100%;
+        justify-content: flex-end;
+        margin: 0 -10% 0 2%;
+
+        @media @tablet{
+            width: 100%;
+            justify-content: center;
+            margin: 0;
+        };
+
+        @media @phone{
+            font-size: 2rem;
+            justify-content: center;
+        };
+    }
+
+    // .logo img{
+    //     display: flex;
+    //     justify-content: center;
+    //     height: 100% auto;
+    //     width: 100% auto;
+    //     background-size: 100% auto;
+    // }
+
 }
 
-.header .logo{
-    width:9%;
-}
-
-.logo img{
+footer div{
     display: flex;
+    // width: 100%;
+    padding-left: 2%;
     justify-content: center;
-    height: 100% auto;
-    width: 100% auto;
-    background-size: 100% auto;
 }
