@@ -205,7 +205,26 @@ img {
   border: 1px solid gray;
 }
 /************TEST BORDER*********************/
-.header a {
+nav {
+  display: flex;
+  width: 100%;
+  justify-content: flex-end;
+  margin: 0 -10% 0 2%;
+}
+@media (max-width: 860px) {
+  nav {
+    width: 100%;
+    justify-content: center;
+    margin: 0;
+  }
+}
+@media (max-width: 500px) {
+  nav {
+    font-size: 2rem;
+    justify-content: center;
+  }
+}
+nav a {
   color: #0a3055;
   display: flex;
   font-size: 2.5rem;
@@ -214,13 +233,30 @@ img {
   justify-content: space-around;
   align-items: center;
 }
-a:hover {
+@media (max-width: 500px) {
+  nav a {
+    font-size: 1.6rem;
+  }
+}
+nav a:hover {
   background-color: rgba(255, 146, 5, 0.5);
   font-weight: bolder;
   border-radius: 5px;
   margin: 3%;
   padding: 3% 0;
   transition-duration: 0.5s;
+}
+@media (max-width: 860px) {
+  nav a:hover {
+    margin: 0 3%;
+    padding: 0;
+  }
+}
+@media (max-width: 500px) {
+  nav a:hover {
+    margin: 0 3%;
+    padding: 0;
+  }
 }
 footer a {
   display: flex;
@@ -243,7 +279,9 @@ footer a {
 }
 .top {
   display: flex;
+  flex-wrap: nowrap;
   background: url(/img/orange-on-plate.jpg) no-repeat center center;
+  background-size: auto;
   padding-bottom: 630px;
 }
 .header {
@@ -251,70 +289,56 @@ footer a {
   background: rgba(240, 248, 255, 0.3);
   width: 100%;
   margin: 0 5%;
+  align-items: center;
 }
 @media (max-width: 860px) {
   .header {
-    display: block;
+    flex-wrap: wrap;
   }
 }
-@media (max-width: 500px) {
-  .header {
-    display: block;
-  }
-}
-.header .h1 {
-  display: flex;
+.header .title {
   width: 45%;
-  order: 0;
 }
 @media (max-width: 860px) {
-  .header .h1 {
-    width: 100%;
-    order: 1;
-  }
-}
-@media (max-width: 500px) {
-  .header .h1 {
+  .header .title {
     width: 100%;
   }
 }
 .header h1 {
-  display: flex;
   width: 100%;
-  align-items: center;
   letter-spacing: 20px;
 }
 @media (max-width: 860px) {
   .header h1 {
-    width: 100%;
-    justify-content: center;
+    width: 80%;
+    align-items: center;
   }
 }
 @media (max-width: 500px) {
   .header h1 {
     font-size: 4rem;
-    justify-content: center;
   }
 }
 .header .logo {
-  display: flex;
   width: 10%;
-  order: 1;
 }
 @media (max-width: 860px) {
   .header .logo {
-    order: 0;
+    width: 80%;
+    height: 20%;
+    order: -1;
+    align-items: center;
   }
 }
+.header .logo img {
+  justify-content: center;
+}
 .header .nav {
-  display: flex;
   width: 45%;
-  order: 2;
 }
 @media (max-width: 860px) {
   .header .nav {
-    width: 100%;
-    order: 3;
+    width: 80%;
   }
 }
 @media (max-width: 500px) {
@@ -322,27 +346,6 @@ footer a {
     font-size: 4rem;
   }
 }
-.header nav {
-  display: flex;
-  width: 100%;
-  justify-content: flex-end;
-  margin: 0 -10% 0 2%;
-}
-@media (max-width: 860px) {
-  .header nav {
-    width: 100%;
-    justify-content: center;
-    margin: 0;
-  }
-}
-@media (max-width: 500px) {
-  .header nav {
-    font-size: 2rem;
-    justify-content: center;
-  }
-}
 footer div {
   display: flex;
-  padding-left: 2%;
-  justify-content: center;
 }
