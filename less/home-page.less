@@ -1,0 +1,181 @@
+.top{
+    display: flex;
+    flex-wrap: nowrap;
+    background: url(/img/orange-on-plate.jpg) no-repeat center center;
+    background-size: auto;
+    padding-bottom: 630px;
+}
+
+.header{
+    display: flex;
+    background: rgba(240, 248, 255, 0.3);
+    width: 100%;
+    margin: 0 2%;
+    border-radius: 10px;
+    align-items: center;
+    overflow: hidden;
+
+    @media @tablet{
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: flex-start;
+    };
+
+    .title{
+        width: 45%;
+        padding-left: 5%;
+
+        @media @tablet{
+            width: 50%;
+        };
+    };
+    
+    h1{
+        width: 100%;
+        letter-spacing: 20px;
+
+        @media @tablet{
+            width: 50%;
+            align-items: center;
+        };
+
+        @media @phone{
+            font-size: 3.5rem;
+        };
+    };
+
+    .logo{
+        width:10%;
+
+        @media @tablet{
+            width: 15%;
+            // height: 5%;
+            order:-1;
+            align-items: center;
+        };
+
+        img{
+            justify-content: center;
+        };
+    };
+    
+    .nav{
+        width: 45%;
+        padding-right: 5%;
+
+        @media @tablet{
+            width: 35.5%;
+        };
+    };
+}
+
+.middle{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100% auto;
+    margin-top: 1%;
+    padding: 5%;
+    border-radius: 5px;
+    background: rgba(240, 248, 255, 0.2);
+    justify-content: center;
+    // box-shadow: 4px 4px 4px 6px rgba(0, 0, 0, 0.2);
+
+    #what{
+        display:flex;
+        width: 80%;
+        background-color: rgba(250, 235, 215, 0.25);
+        border-radius: 5px;
+        padding: 5%;
+        margin-bottom: 2%;
+
+        h2{
+            font-weight: bold;
+            letter-spacing: 10px;
+        };
+
+        p{
+            font-size: 2rem;
+            padding-top: 2%;
+        };
+    }
+
+    #how{
+        display: flex;
+        // flex-wrap: nowrap;
+        width: 80%;
+        padding: 5%;
+        background-color: rgba(250, 235, 215, 0.25);
+        border-radius: 5px;
+        // justify-content: center;
+
+        h2{
+            flex-wrap: wrap;
+            font-weight: bold;
+            letter-spacing: 5px;
+        };
+
+        .business{
+            flex-wrap: wrap;
+            width: 40%;
+            padding-right: 4%;
+        };
+
+        .volunteer{
+            flex-wrap: wrap;
+            width: 40%;
+        };
+
+        h3{
+            text-align: left;
+            text-justify: inter-word;
+        };
+
+        p{
+            font-size: 2rem;
+            padding-top: 10%;
+            text-align: justify;
+        };
+
+        .btn{
+            font-size: 1.6rem;
+            font-weight: 600;
+            font-variant-caps: all-small-caps;
+            letter-spacing: 2px;
+        };
+        
+        .btn:hover{
+            background-color: rgba(255, 146, 5, 0.5);
+            font-weight: bolder;
+            color: white;
+            font-variant-caps: titling-caps;
+        };
+    }
+
+    #who{
+        // display:flex;
+        padding: 5%;
+        margin-top: 2%;
+        width: 80%;
+        background-color: rgba(250, 235, 215, 0.25);
+        border-radius: 5px;
+
+        h2{
+            font-weight: bold;
+        };
+
+        .bio{
+            padding-top: 2%;
+            display: flex;
+            flex-wrap: wrap;
+            width: 40%;
+        };
+    }
+}
+
+footer div{
+    display: flex;
+    // flex-wrap:wrap;
+    // width: 100%;
+    // padding-left: 2%;
+    // justify-content: center;
+}
