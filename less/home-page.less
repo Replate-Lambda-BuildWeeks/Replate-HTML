@@ -24,10 +24,19 @@
 
         @media @desktop{
             width: 15%;
-            // height: 5%;
-            // order:-1;
-            align-items: center;
+            margin-left: 15%;
+            // padding-right: 20%
+            justify-items: center;
         };
+
+        @media @tablet{
+            margin-left: 10%;
+            margin-right: 10%;
+        };
+
+        @media @phone{
+            visibility: hidden;
+        }
     };
     
     .titleNav{
@@ -50,14 +59,13 @@
             letter-spacing: 20px;
             justify-content: center;
 
-            // @media @tablet{
-            //     width: 50%;
-            //     align-items: center;
-            // };
+            @media @tablet{
+                font-size: 3.5rem;
+            };
 
-            // @media @phone{
-            //     font-size: 3.5rem;
-            // };
+            @media @phone{
+                margin-right: 35%;
+            };
         };
 
         .nav{
@@ -65,16 +73,28 @@
             height: auto;
             margin-right: 50%;
 
-            // @media @tablet{
-            //     width: 35.5%;
-            // };
+            @media @desktop{
+                margin-right: 45%;
+            };
 
             nav{
                 display: flex;
                 align-items: center;
                     a{
                         padding: 3%;
-                    }
+
+                        @media @desktop{
+                            font-size:2rem;
+                        };
+
+                        @media @tablet{
+                            font-size:1.4rem; 
+                        };
+
+                        @media @phone{
+                            margin: 0;
+                        }
+                    };
             
             };
         };
