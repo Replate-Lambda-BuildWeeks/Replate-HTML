@@ -439,10 +439,16 @@ a {
   }
 }
 .middle #how .btn {
+  background-color: rgba(77, 102, 124, 0.5);
   font-size: 1.6rem;
   font-weight: 600;
   font-variant-caps: all-small-caps;
   letter-spacing: 2px;
+  border-radius: 3px;
+}
+.middle #how .btn a {
+  color: #0a3055;
+  text-decoration: none;
 }
 .middle #how .btn:hover {
   background-color: rgba(255, 146, 5, 0.5);
