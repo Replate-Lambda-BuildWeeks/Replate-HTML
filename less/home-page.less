@@ -1,6 +1,7 @@
 .top{
     display: flex;
-    flex-wrap: nowrap;
+    justify-content: center;
+    // flex-wrap: nowrap;
     background: url(/img/orange-on-plate.jpg) no-repeat center center;
     background-size: auto;
     padding-bottom: 630px;
@@ -9,66 +10,74 @@
 .header{
     display: flex;
     background: rgba(240, 248, 255, 0.3);
-    width: 100%;
-    margin: 0 2%;
+    width: 40%;
     border-radius: 10px;
     align-items: center;
-    overflow: hidden;
+    // overflow: hidden;
     justify-content: center;
 
-    @media @tablet{
-        flex-wrap: wrap;
-        justify-content: center;
-        align-items: flex-start;
-    };
-
-    .titleNav{
-        align-items: flex-end;
-    }
-    .title{
-        width: 45%;
-        padding-left: 5%;
-
-        @media @tablet{
-            width: 50%;
-        };
-    };
+    // @media @tablet{
+    //     flex-wrap: wrap;
+    //     justify-content: center;
+    //     align-items: flex-start;
+    // };
     
-    h1{
-        width: 100%;
-        letter-spacing: 20px;
-
-        @media @tablet{
-            width: 50%;
-            align-items: center;
-        };
-
-        @media @phone{
-            font-size: 3.5rem;
-        };
-    };
-
     .logo{
-        width:10%;
+        width:25%;
 
-        @media @tablet{
-            width: 15%;
-            // height: 5%;
-            order:-1;
-            align-items: center;
-        };
-
-        img{
-            justify-content: center;
-        };
+        // @media @tablet{
+        //     width: 15%;
+        //     // height: 5%;
+        //     order:-1;
+        //     align-items: center;
+        // };
     };
     
-    .nav{
-        width: 45%;
-        padding-right: 5%;
+    .titleNav{
+        display:flex;
+        flex-wrap: wrap;
+        align-content: center;
+        justify-content: center;
+        width:100%;
 
-        @media @tablet{
-            width: 35.5%;
+        // @media @tablet{
+        //     width: 50%;
+        // };
+    // };
+    
+        h1{
+            width: 100%;
+            // padding-bottom: 1%;
+            padding-left: 10%;
+            letter-spacing: 20px;
+
+            // @media @tablet{
+            //     width: 50%;
+            //     align-items: center;
+            // };
+
+            // @media @phone{
+            //     font-size: 3.5rem;
+            // };
+        };
+
+        .nav{
+            width: 80%;
+            height: auto;
+            margin-left: 15%;
+
+            // @media @tablet{
+            //     width: 35.5%;
+            // };
+
+            nav{
+                display: flex;
+                align-items: center;
+                    a{
+                        padding: 5%;
+                    }
+            
+            };
         };
     };
 }
@@ -362,11 +371,22 @@
     };
 }
 
-footer div{
+footer{
     display: flex;
-    background-color: inherit;
-    flex-wrap:wrap;
+    flex-wrap: wrap;
     width: 100%;
-    padding-left: 2%;
+    padding-top: 2%;
     justify-content: center;
+
+    div{
+        display: flex;
+        width: 100%;
+    };
+
+    p{
+        text-align: center;
+        color: @font-color;
+        font-size: 1.6rem;
+        padding: 1%;
+      };
 }
