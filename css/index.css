@@ -221,13 +221,20 @@ a {
 .header {
   display: flex;
   background: rgba(240, 248, 255, 0.3);
-  width: 40%;
+  width: 96.5%;
   border-radius: 10px;
   align-items: center;
   justify-content: center;
 }
 .header .logo {
-  width: 25%;
+  width: 15%;
+  margin-left: 20%;
+}
+@media (max-width: 1000px) {
+  .header .logo {
+    width: 15%;
+    align-items: center;
+  }
 }
 .header .titleNav {
   display: flex;
@@ -237,21 +244,23 @@ a {
   width: 100%;
 }
 .header .titleNav h1 {
-  width: 100%;
-  padding-left: 10%;
+  width: 100% auto;
+  margin-right: 45%;
+  padding-top: 2%;
   letter-spacing: 20px;
+  justify-content: center;
 }
 .header .titleNav .nav {
-  width: 80%;
+  width: 100%;
   height: auto;
-  margin-left: 15%;
+  margin-right: 50%;
 }
 .header .titleNav .nav nav {
   display: flex;
   align-items: center;
 }
 .header .titleNav .nav nav a {
-  padding: 5%;
+  padding: 3%;
 }
 .middle {
   display: flex;

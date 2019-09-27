@@ -1,7 +1,6 @@
 .top{
     display: flex;
     justify-content: center;
-    // flex-wrap: nowrap;
     background: url(/img/orange-on-plate.jpg) no-repeat center center;
     background-size: auto;
     padding-bottom: 630px;
@@ -10,27 +9,25 @@
 .header{
     display: flex;
     background: rgba(240, 248, 255, 0.3);
-    width: 40%;
+    width: 96.5%;
     border-radius: 10px;
     align-items: center;
-    // overflow: hidden;
     justify-content: center;
 
-    // @media @tablet{
-    //     flex-wrap: wrap;
-    //     justify-content: center;
-    //     align-items: flex-start;
+    // @media @desktop{
+    //     width: 80%;
     // };
     
     .logo{
-        width:25%;
+        width:15%;
+        margin-left: 20%;
 
-        // @media @tablet{
-        //     width: 15%;
-        //     // height: 5%;
-        //     order:-1;
-        //     align-items: center;
-        // };
+        @media @desktop{
+            width: 15%;
+            // height: 5%;
+            // order:-1;
+            align-items: center;
+        };
     };
     
     .titleNav{
@@ -46,10 +43,12 @@
     // };
     
         h1{
-            width: 100%;
-            // padding-bottom: 1%;
-            padding-left: 10%;
+            width: 100% auto;
+            margin-right: 45%;
+            // padding-left: 10%;
+            padding-top: 2%;
             letter-spacing: 20px;
+            justify-content: center;
 
             // @media @tablet{
             //     width: 50%;
@@ -62,9 +61,9 @@
         };
 
         .nav{
-            width: 80%;
+            width: 100%;
             height: auto;
-            margin-left: 15%;
+            margin-right: 50%;
 
             // @media @tablet{
             //     width: 35.5%;
@@ -74,7 +73,7 @@
                 display: flex;
                 align-items: center;
                     a{
-                        padding: 5%;
+                        padding: 3%;
                     }
             
             };
