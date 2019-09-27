@@ -1,7 +1,3 @@
-@background {
-  background-color: rgba(250, 235, 215, 0.2);
-  border-radius: 5px;
-}
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -178,26 +174,13 @@ a {
 }
 /************TEST BORDER*********************/
 /************TEST BORDER*********************/
-nav {
+.header nav {
   display: flex;
   width: 100%;
   justify-content: flex-end;
   margin: 0 -10% 0 2%;
 }
-@media (max-width: 860px) {
-  nav {
-    width: 100%;
-    justify-content: center;
-    margin: 0;
-  }
-}
-@media (max-width: 500px) {
-  nav {
-    font-size: 2rem;
-    justify-content: center;
-  }
-}
-nav a {
+.header nav a {
   color: #0a3055;
   display: flex;
   font-size: 2rem;
@@ -206,39 +189,31 @@ nav a {
   justify-content: space-around;
   align-items: center;
 }
-@media (max-width: 500px) {
-  nav a {
-    font-size: 1.6rem;
-  }
-}
-nav a a:hover {
+.header nav a:hover {
   background-color: rgba(255, 146, 5, 0.5);
   font-weight: bolder;
   border-radius: 5px;
-  margin: 3%;
   padding: 3% 0;
   transition-duration: 0.5s;
 }
-@media (max-width: 860px) {
-  nav a a:hover {
-    margin: 0 3%;
-    padding: 0;
-  }
-}
 .footer {
+  display: flex;
   width: 100%;
-  border-top: 2px dashed silver;
-  background: #FFEBCD;
+  justify-content: center;
 }
-.footer p {
-  text-align: center;
-  color: #212529;
-  font-size: 1.6rem;
-  padding: 20px;
+.footer a {
+  color: #0a3055;
+  font-size: 2rem;
+  padding: 0 2.5%;
+}
+@media (max-width: 500px) {
+  .footer a {
+    font-size: 1.5rem;
+  }
 }
 .top {
   display: flex;
-  flex-wrap: nowrap;
+  justify-content: center;
   background: url(/img/orange-on-plate.jpg) no-repeat center center;
   background-size: auto;
   padding-bottom: 630px;
@@ -246,63 +221,87 @@ nav a a:hover {
 .header {
   display: flex;
   background: rgba(240, 248, 255, 0.3);
-  width: 100%;
-  margin: 0 2%;
+  width: 96.5%;
   border-radius: 10px;
   align-items: center;
-  overflow: hidden;
-}
-@media (max-width: 860px) {
-  .header {
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: flex-start;
-  }
-}
-.header .title {
-  width: 45%;
-  padding-left: 5%;
-}
-@media (max-width: 860px) {
-  .header .title {
-    width: 50%;
-  }
-}
-.header h1 {
-  width: 100%;
-  letter-spacing: 20px;
-}
-@media (max-width: 860px) {
-  .header h1 {
-    width: 50%;
-    align-items: center;
-  }
-}
-@media (max-width: 500px) {
-  .header h1 {
-    font-size: 3.5rem;
-  }
+  justify-content: center;
 }
 .header .logo {
-  width: 10%;
+  width: 15%;
+  margin-left: 20%;
+}
+@media (max-width: 1000px) {
+  .header .logo {
+    width: 15%;
+    margin-left: 15%;
+    justify-items: center;
+  }
 }
 @media (max-width: 860px) {
   .header .logo {
-    width: 15%;
-    order: -1;
-    align-items: center;
+    margin-left: 10%;
+    margin-right: 10%;
   }
 }
-.header .logo img {
+@media (max-width: 500px) {
+  .header .logo {
+    visibility: hidden;
+  }
+}
+.header .titleNav {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center;
+  width: 100%;
+}
+.header .titleNav h1 {
+  width: 100% auto;
+  margin-right: 45%;
+  padding-top: 2%;
+  letter-spacing: 20px;
   justify-content: center;
 }
-.header .nav {
-  width: 45%;
-  padding-right: 5%;
+@media (max-width: 860px) {
+  .header .titleNav h1 {
+    font-size: 3.5rem;
+  }
+}
+@media (max-width: 500px) {
+  .header .titleNav h1 {
+    margin-right: 35%;
+  }
+}
+.header .titleNav .nav {
+  width: 100%;
+  height: auto;
+  margin-right: 50%;
+}
+@media (max-width: 1000px) {
+  .header .titleNav .nav {
+    margin-right: 45%;
+  }
+}
+.header .titleNav .nav nav {
+  display: flex;
+  align-items: center;
+}
+.header .titleNav .nav nav a {
+  padding: 3%;
+}
+@media (max-width: 1000px) {
+  .header .titleNav .nav nav a {
+    font-size: 2rem;
+  }
 }
 @media (max-width: 860px) {
-  .header .nav {
-    width: 35.5%;
+  .header .titleNav .nav nav a {
+    font-size: 1.4rem;
+  }
+}
+@media (max-width: 500px) {
+  .header .titleNav .nav nav a {
+    margin: 0;
   }
 }
 .middle {
@@ -323,9 +322,21 @@ nav a a:hover {
   padding: 5%;
   margin-bottom: 2%;
 }
+@media (max-width: 860px) {
+  .middle #what {
+    justify-content: center;
+    width: 100%;
+  }
+}
 .middle #what h2 {
   font-weight: bold;
   letter-spacing: 10px;
+}
+@media (max-width: 860px) {
+  .middle #what h2 {
+    font-size: 3rem;
+    text-align: center;
+  }
 }
 .middle #what p {
   font-size: 2rem;
@@ -337,29 +348,95 @@ nav a a:hover {
   padding: 5%;
   background-color: rgba(250, 235, 215, 0.25);
   border-radius: 5px;
+  justify-content: center;
+  justify-content: space-evenly;
+}
+@media (max-width: 1000px) {
+  .middle #how {
+    flex-wrap: wrap;
+  }
+}
+@media (max-width: 860px) {
+  .middle #how {
+    width: 100%;
+  }
+}
+@media (max-width: 500px) {
+  .middle #how {
+    flex-direction: column;
+    align-items: center;
+  }
 }
 .middle #how h2 {
   flex-wrap: wrap;
   font-weight: bold;
   letter-spacing: 5px;
+  padding-bottom: 5%;
+  width: 100% auto;
+}
+@media (max-width: 1000px) {
+  .middle #how h2 {
+    font-size: 3rem;
+    text-align: center;
+  }
+}
+@media (max-width: 500px) {
+  .middle #how h2 {
+    font-size: 2.4rem;
+    padding-bottom: 2%;
+  }
 }
 .middle #how .business {
+  display: flex;
   flex-wrap: wrap;
-  width: 40%;
+  width: 45%;
   padding-right: 4%;
+  justify-content: center;
+}
+@media (max-width: 500px) {
+  .middle #how .business {
+    width: 70%;
+    padding-bottom: 10%;
+    padding-right: 0;
+  }
 }
 .middle #how .volunteer {
+  display: flex;
   flex-wrap: wrap;
-  width: 40%;
+  width: 45%;
+  justify-content: center;
+}
+@media (max-width: 500px) {
+  .middle #how .volunteer {
+    width: 70%;
+  }
 }
 .middle #how h3 {
   text-align: left;
-  text-justify: inter-word;
+}
+@media (max-width: 1000px) {
+  .middle #how h3 {
+    text-align: center;
+    font-size: 2.4rem;
+    width: 100% auto;
+  }
+}
+@media (max-width: 500px) {
+  .middle #how h3 {
+    font-size: 2rem;
+    padding-top: 3%;
+    font-weight: 600;
+  }
 }
 .middle #how p {
   font-size: 2rem;
-  padding-top: 10%;
+  padding-top: 8%;
   text-align: justify;
+}
+@media (max-width: 500px) {
+  .middle #how p {
+    padding-top: 1%;
+  }
 }
 .middle #how .btn {
   font-size: 1.6rem;
@@ -374,21 +451,138 @@ nav a a:hover {
   font-variant-caps: titling-caps;
 }
 .middle #who {
-  padding: 5%;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 5% 10%;
   margin-top: 2%;
   width: 80%;
   background-color: rgba(250, 235, 215, 0.25);
   border-radius: 5px;
+  justify-content: center;
+}
+@media (max-width: 860px) {
+  .middle #who {
+    width: 100%;
+  }
 }
 .middle #who h2 {
   font-weight: bold;
+  padding-bottom: 10%;
+}
+@media (max-width: 860px) {
+  .middle #who h2 {
+    font-size: 3rem;
+  }
 }
 .middle #who .bio {
+  display: flex;
   padding-top: 2%;
+  flex-wrap: wrap;
+  width: 100%;
+}
+@media (max-width: 860px) {
+  .middle #who .bio h3 {
+    font-size: 2.2rem;
+  }
+}
+.middle #who .bio .amir {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  padding-bottom: 10%;
+}
+.middle #who .bio .amir div {
+  width: 50%;
+  padding-left: 10%;
+}
+.middle #who .bio .amir a img {
+  width: 50%;
+}
+.middle #who .bio .amir .img {
+  width: 50%;
+  padding: 0 10%;
+}
+.middle #who .bio .ari {
+  display: flex;
+  flex-direction: row-reverse;
+  width: 100%;
+  align-items: center;
+  padding-bottom: 10%;
+}
+.middle #who .bio .ari div {
+  width: 50%;
+}
+.middle #who .bio .ari a img {
+  width: 40%;
+}
+.middle #who .bio .ari .img {
+  width: 50%;
+  padding: 0 10%;
+}
+.middle #who .bio .gurpreet {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  padding-bottom: 10%;
+}
+.middle #who .bio .gurpreet div {
+  width: 50%;
+  padding-left: 10%;
+}
+.middle #who .bio .gurpreet a img {
+  width: 50%;
+}
+.middle #who .bio .gurpreet .img {
+  width: 50%;
+  padding: 0 10%;
+}
+.middle #who .bio .rockey {
+  display: flex;
+  flex-direction: row-reverse;
+  width: 100%;
+  align-items: center;
+  padding-bottom: 10%;
+}
+.middle #who .bio .rockey div {
+  width: 50%;
+}
+.middle #who .bio .rockey a img {
+  width: 40%;
+}
+.middle #who .bio .rockey .img {
+  width: 50%;
+  padding: 0 10%;
+}
+.middle #who .bio .william {
+  display: flex;
+  width: 100%;
+  align-items: center;
+}
+.middle #who .bio .william div {
+  width: 50%;
+  padding-left: 10%;
+}
+.middle #who .bio .william a img {
+  width: 50%;
+}
+.middle #who .bio .william .img {
+  width: 50%;
+  padding: 0 10%;
+}
+footer {
   display: flex;
   flex-wrap: wrap;
-  width: 40%;
+  width: 100%;
+  padding-top: 2%;
+  justify-content: center;
 }
 footer div {
   display: flex;
+  width: 100%;
+}
+footer p {
+  text-align: center;
+  color: #212529;
+  font-size: 1.6rem;
+  padding: 1%;
 }
