@@ -14,6 +14,7 @@
     border-radius: 10px;
     align-items: center;
     overflow: hidden;
+    justify-content: center;
 
     @media @tablet{
         flex-wrap: wrap;
@@ -21,6 +22,9 @@
         align-items: flex-start;
     };
 
+    .titleNav{
+        align-items: flex-end;
+    }
     .title{
         width: 45%;
         padding-left: 5%;
@@ -88,9 +92,19 @@
         padding: 5%;
         margin-bottom: 2%;
 
+        @media @tablet{
+            justify-content: center;
+            width: 100%;
+        };
+
         h2{
             font-weight: bold;
             letter-spacing: 10px;
+
+            @media @tablet{
+                font-size: 3rem;
+                text-align: center;
+            };
         };
 
         p{
@@ -101,39 +115,93 @@
 
     #how{
         display: flex;
-        // flex-wrap: nowrap;
         width: 80%;
         padding: 5%;
         background-color: rgba(250, 235, 215, 0.25);
         border-radius: 5px;
-        // justify-content: center;
+        justify-content: center;
+        justify-content: space-evenly;
+
+        @media @desktop{
+            flex-wrap: wrap;
+        };
+
+        @media @tablet{
+            width: 100%;
+        };
+
+        @media @phone{
+            flex-direction: column;
+            align-items: center;
+        }
 
         h2{
             flex-wrap: wrap;
             font-weight: bold;
             letter-spacing: 5px;
+            padding-bottom: 5%;
+            width: 100% auto;
+
+            @media @desktop{
+                font-size: 3rem;
+                text-align: center;
+            };
+
+            @media @phone{
+                font-size: 2.4rem;
+                padding-bottom: 2%;
+            }
         };
 
         .business{
+            display: flex;
             flex-wrap: wrap;
-            width: 40%;
+            width: 45%;
             padding-right: 4%;
+            justify-content: center;
+            
+            @media @phone{
+                width: 70%;
+                padding-bottom: 10%;
+                padding-right: 0;
+            };
         };
 
         .volunteer{
+            display: flex;
             flex-wrap: wrap;
-            width: 40%;
+            width: 45%;
+            justify-content: center;
+
+            @media @phone{
+                width: 70%;
+            };
         };
 
         h3{
             text-align: left;
-            text-justify: inter-word;
+            
+            @media @desktop{
+                text-align: center;
+                font-size: 2.4rem;
+                width: 100% auto;
+            };
+
+            @media @phone{
+                font-size: 2rem;
+                padding-top: 3%;
+                font-weight: 600;
+            }
         };
 
         p{
             font-size: 2rem;
-            padding-top: 10%;
+            padding-top: 8%;
             text-align: justify;
+
+            @media @phone{
+                padding-top:1%;
+            };
         };
 
         .btn{
@@ -152,22 +220,24 @@
     }
 
     #who{
-        // display:flex;
+        display:flex;
+        flex-wrap: wrap;
         padding: 5%;
         margin-top: 2%;
         width: 80%;
         background-color: rgba(250, 235, 215, 0.25);
         border-radius: 5px;
+        justify-content: center;
 
         h2{
             font-weight: bold;
         };
 
         .bio{
-            padding-top: 2%;
             display: flex;
+            padding-top: 2%;
             flex-wrap: wrap;
-            width: 40%;
+            width: 100%;
         };
     }
 }
