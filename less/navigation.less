@@ -1,6 +1,6 @@
 // Navigation Styles here
 
-nav{
+.header nav{
     display: flex;
     width: 100%;
     justify-content: flex-end;
@@ -12,10 +12,10 @@ nav{
         margin: 0;
     };
 
-    @media @phone{
-        font-size: 2rem;
-        justify-content: center;
-    };
+    // @media @phone{
+    //     font-size: 2rem;
+    //     justify-content: center;
+    // };
 
     a{
         color: #0a3055;
@@ -25,42 +25,32 @@ nav{
         margin: 0 3%;
         justify-content: space-around;
         align-items: center;
+        
+        // @media @tablet{
+        //     margin: 0 3%;
+        //     padding: 0;
+        // };
+        
+        // @media @phone{
+        //     font-size: 1.6rem;
+        // };
+    };
 
-        &:hover{
+        a:hover{
             background-color: rgba(255, 146, 5, 0.5);
             font-weight: bolder;
             border-radius: 5px;
             margin: 3%;
             padding: 3% 0;
             transition-duration: 0.5s;
-        }
-        @media @phone{
-            font-size: 1.6rem;
         };
-        
-        
+    }
 
-            @media @tablet{
-                margin: 0 3%;
-                padding: 0;
-            };
-        
-    };
-    // a:hover{
-    //     color: red;
-    // }
+.footer nav{
+    color: #0a3055;
+    font-size: 2rem;
+    text-decoration: none;
+    margin: 0 3%;
+    justify-content: space-around;
+    align-items: center;
 }
-
-// .footer nav a{
-//     color: #0a3055;
-//     display: flex;
-//     font-size: 2rem;
-//     text-decoration: none;
-//     margin: 0 3%;
-//     justify-content: space-around;
-//     align-items: center;
-
-//     a:hover{
-//         cursor: text
-//     };
-// }
